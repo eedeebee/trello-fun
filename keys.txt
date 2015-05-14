@@ -1,3 +1,0 @@
-Key: 00018fcfa04e7a44db89b65ff9a4c7b2
-Secret: 03add2e2cc3642b9fec6eb3328831468ae7f17b1afdc1cd42f3cb7b1a0064b31
-

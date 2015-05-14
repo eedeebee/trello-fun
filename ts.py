@@ -6,6 +6,7 @@ import json
 import requests
 import urllib
 import sys
+import yaml
 
 from string import Template
 
@@ -26,8 +27,9 @@ parser.add_argument('outfile', nargs='?', type=argparse.FileType('wb'),
 
 args = parser.parse_args()
 
-key='00018fcfa04e7a44db89b65ff9a4c7b2'
-token='80cd8c6430aa41fefb0e60f1cad2bd73aa53ee4116108676fd5e45dda418fd77'
+keys = yaml.load(open("keys.yml", 'r'))
+key= keys['Key']
+token = keys['Secret']
 days=args.days
 board=urllib.quote(args.board)
 
