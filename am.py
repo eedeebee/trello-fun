@@ -20,16 +20,19 @@ parser.add_argument('--dryrun', action='store_true',
 parser.add_argument('--boardID', type=str, 
                     help='Board ID', 
                     default='bdpGLeHh') # Trello Testing Sandbox board
+parser.add_argument('--sourceBoardID', type=str, 
+                    help='Board ID', 
+                    default='l2f4QHJ8') # default is a webapp team L board
 
 args = parser.parse_args()
 
-sourceBoardID='l2f4QHJ8'  #webapp board hardcoded for now
 
 keys = yaml.load(open("keys.yml", 'r'))
 key= keys['Key']
 secret = keys['Secret']
 token = keys['Token']
 boardID=urllib.quote(args.boardID)
+sourceBoardID=urllib.quote(args.sourceBoardID) 
 
 print 'Adding members to' + ' "' + args.boardID + '" from "' + sourceBoardID + '"'
 

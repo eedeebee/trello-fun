@@ -13,9 +13,9 @@ The token needs to be a read/write capable token and is only needed and used by 
 
 ## Assign Members 
 
-    ./am.py -h
+    ./am.py -h --sourceBoardID [ID] --boardID [ID]
 
-Reads a hardcoded board ID and copies all users and admins from that board to the specified board.
+Copies all users and admins from source board to the specified board.
 
 ## Trello Search
 
