@@ -6,14 +6,26 @@ Trello utilities built using the Trello REST API.  They read credentials from `k
      Secret: yyyyyyyyyyyyy
      Token: xxxxxxxxxxxxxxxxxxxx
 
-See Trello API authentication details.  The key and secret are used for read only activities.
-The token needs to be a read/write capable token and is only needed and used by the am.py utility
+See Trello API authentication details, in particular, [getting a key and a token](https://trello.com/docs/gettingstarted/index.html#getting-an-application-key).
+
+The key and secret are used for read only activities.
+The token needs to be a read/write capable token.
 
 
+## Add member to organization boards
 
-## Assign Members 
+Examples:
 
-    ./am.py -h --sourceBoardID [ID] --boardID [ID]
+    ./add-member-to-org-boards.py --help
+    ./add-member-to-org-boards.py --member kristinyamauchi --namePattern Engineering
+    ./add-member-to-org-boards.py --member kristinyamauchi --namePattern "Team Tea"  --role admin
+
+## Copy Board Members 
+
+Examples:
+
+    ./cp-members.py --help
+    ./cp-members.py --sourceBoardID [ID] --boardID [ID]
 
 Copies all users and admins from source board to the specified board.
 
