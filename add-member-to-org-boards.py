@@ -68,8 +68,8 @@ for board in boards:
     if args.dryrun:
         continue
 
-    t = Template('https://api.trello.com/1/board/$boardID/members/$member?key=$key&token=$token&type=admin')
-    url = t.substitute(key=key, token=token, boardID=id, member=member[u'id'])
+    t = Template('https://api.trello.com/1/board/$boardID/members/$member?key=$key&token=$token&type=$role')
+    url = t.substitute(key=key, token=token, boardID=id, member=member[u'id'], role=role)
 
     print url
 
